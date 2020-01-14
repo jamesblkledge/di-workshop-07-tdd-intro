@@ -10,10 +10,22 @@ describe('Array', function() {
       expect(array).to.deep.equal([1, 2, 3, 4, 5])
     })
 
-    it('should alter the length properly', function() {
+    it('should alter the length property', function() {
       var array = [1, 1, 1, 1]
       array.push(1)
       expect(array.length).to.equal(5)
+    })
+
+    it('should remove the last item from the array', function() {
+      var array = [1, 2, 3, 4, 5]
+      array.pop()
+      expect(array).to.deep.equal([1, 2, 3, 4])
+    })
+
+    it('should alter the length property', function() {
+      var array = [1, 1, 1, 1, 1]
+      array.pop()
+      expect(array.length).to.equal(4)
     })
   })
 })
